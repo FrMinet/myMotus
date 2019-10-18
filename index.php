@@ -1,7 +1,7 @@
 <?php
 
 // VARIABLES
-$word_to_find = "maison";
+$word_to_find = "cartable";
 $limit_char = strlen($word_to_find);
 $splitted_word_to_find = array();
 $splitted_answer = array();
@@ -9,7 +9,7 @@ $corrective = array();
 $turn_counter = 0;
 $continue = true;
 
-echo("Bienvenue dans 'MyMotus', le jeu où vous devez retrouver un mot de 8 lettres" . "\n");
+echo("Bienvenue dans 'MyMotus', le jeu où vous devez retrouver un mot de " . $limit_char . " lettres" . "\n");
 // BOUCLE DE JEU
 while ($continue == true) {
     echo("Nombre de tours : " . $turn_counter . "\n");
@@ -55,7 +55,7 @@ while ($continue == true) {
     echo($message . "\n");
     if (strtolower($message) == $word_to_find)
     {
-        echo("Félicitations vous avez gagné! \n");
+        echo("Félicitations vous avez gagné en " . $turn_counter . " essais! \n");
         $continue = false;
     }
 }
